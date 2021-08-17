@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's chat a little</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section id="chat-head">
+
+        
+
+        <div class="menu" id="pro_file">
+
+
+            <div class="profile">
+
+                <div class="left-part">
+                    <img class="propicture" src="images/profile.jpg" alt="">
+                    
+                    <div class="user_info">
+                        <p>B Nazarov</p>
+                        <p class="num">+993 62559305</p>
+                    </div>
+                </div>
+
+                <div class="right-part">
+                    <i id="icon" class="fas fa-moon"></i>
+                </div>
+                <i class="fas fa-window-close" onclick="hideMenu()"></i>
+
+            </div>
+
+            <div class="options">
+
+                <div class="menu-links">
+                    <i class="fas fa-user-friends"></i>
+                    <p>new group</p>
+                </div>
+
+                <div class="menu-links">
+                    <i class="fas fa-user"></i>
+                    <p>contacts</p>
+                </div>
+
+                <div class="menu-links">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>calls</p>
+                </div>
+
+                <div class="menu-links">
+                    <i class="fas fa-cog"></i>
+                    <p>settings</p>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="right-header">
+
+            <div class="main_header" id="main">
+                <i class="fas fa-bars" onclick="showMenu()"></i>
+                <h3>Turkmenchat</h3>
+                <i class="fas fa-search"></i>   
+            </div>
+
+            <div class="images contacts" id="user">
+                <img src="images/user.jpg" alt="">
+                <p>Dovran Rahymow</p>
+            </div>
+
+            <div class="images message_box" id="message">
+                <div class="user1">
+                    <img src="images/user.jpg" alt="">
+                    <p>Dovran Rahymow</p>
+                </div>
+
+                <div class="input_box">
+                    <input type="text" placeholder="Type messages">
+                </div>
+            </div>
+          
+        </div>
+
+           
+       
+    </section>
+
+    <script>
+
+        var pro_file = document.getElementById("pro_file");
+
+        function showMenu(){
+            pro_file.style.left = "0";
+        }
+
+        function hideMenu(){
+            pro_file.style.left = "-200px";
+        }
+
+        var user = document.getElementById("user");
+        var message = document.getElementById("message");
+
+        user.onclick = function(){
+            user.style.display = "none";
+            message.style.display = "flex";
+        }
+
+        var main = document.getElementById("main");
+
+        main.onclick = function(){
+            user.style.display = "flex";
+            message.style.display = "none"
+        }
+
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark_themes");
+            if(document.body.classList.contains("dark_themes")){
+                
+            }
+        }
+    </script>
+</body>
+</html>
